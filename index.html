@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é a Twitch</title>
+    <!-- Importando as fontes pelo link do google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link 
+    rel="shortcut icon" 
+    href="/Estudos/seção-33-landing-page-com-html5-css3/assets/img/favicon_io twitch/favicon.ico" 
+    type="image/x-icon">
+    <!-- O ideal não seria bom ter esse monte de requisição, pois a pagina é unica, então o arquivo css não iria ficar enorme, então o
+    ideal seria ter tudo do css nesse unico arquivo que seja necessario pra exibir a pagina-->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/config-inicial/elements.css">
+    <link rel="stylesheet" href="assets/css/config-inicial/classes-reutilizaveis.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Boa pratica: sempre colocar headings e algum texto pra testar as configurações iniciais -->
+    <!-- <h1>
+        Testando
+    </h1>
+    <h2>Teste</h2>
+    <h3>Teste</h3>
+    <h4>Teste</h4>
+    <h5>Teste</h5>
+    <h6>Teste</h6>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis nam quos repellat rem ea explicabo voluptatum est veritatis error porro aut, consequuntur reprehenderit et ex quis, incidunt dolorum deserunt dolor?</p> -->
+    
+    <!-- Pra deixar o menu responsivo, uma gambiarra 
+    role é so pra garantir que é um botão, so pra que leitores de tela identifiquem isso como um botão pra fecher o menu e o
+    arial tem o mesmo objetivo-->
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <!-- O botão na verdade é o label, o input vai ser so pra uma logica pro input aparecer ed desaparecer -->
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <!-- Menu principal -->
+    <aside class="menu main-white-bg">
+        <div class="main-content menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#oqueeatwitch">
+                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                    <svg viewBox="0 0 256 268" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                        <g>
+                            <path d="M17.4579119,0 L0,46.5559188 L0,232.757287 L63.9826001,232.757287 L63.9826001,267.690956 L98.9144853,267.690956 L133.811571,232.757287 L186.171922,232.757287 L256,162.954193 L256,0 L17.4579119,0 Z M40.7166868,23.2632364 L232.73141,23.2632364 L232.73141,151.29179 L191.992415,192.033461 L128,192.033461 L93.11273,226.918947 L93.11273,192.033461 L40.7166868,192.033461 L40.7166868,23.2632364 Z M104.724985,139.668381 L127.999822,139.668381 L127.999822,69.843872 L104.724985,69.843872 L104.724985,139.668381 Z M168.721862,139.668381 L191.992237,139.668381 L191.992237,69.843872 L168.721862,69.843872 L168.721862,139.668381 Z" fill="#5A3E85"></path>
+                        </g>
+                    </svg>
+                </a>
+            </h1>
+            <nav>
+                <!-- Quando clicar ne alguma opção o menu responsivo some -->
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#intro">Sobre mim</a></li>
+                    <li><a href="#oqueeatwitch">O que é</a></li>
+                    <li><a href="#quando-comecou">Historia da Twitch</a></li>
+                    <li><a href="#niveis-de-transmissao">Niveis</a></li>
+                    <li><a href="#recursos-desbloqueados">Recursos desbloqueados</a></li>
+                    <li><a href="#melhores-canais">Melhores canais</a></li>
+                    <li><a href="#meu-contato">Meu contato ❤️</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- So pra ter um espaçamento do menu -->
+    <div class="menu-spacing"></div>
+
+
+    <section id="intro" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>
+                    Sobre mim:
+                </h2>
+                <p>
+                    Olá sou o Pedro Henrique, sou iniciante no desenvolvimento web, comecei a estudar sobre programação web no segundo semestre desse ano de 2021 com HTML5, CSS3, JS e REACT na universidade <a href="https://campanhas.newtonpaiva.br/transferencia?utm_source=google&utm_medium=cpc&utm_campaign=presencial_retorno_2022_1&utm_content=search&gclid=Cj0KCQiAnaeNBhCUARIsABEee8WDKmi6-MBfoptgxbdChzvubzZbZvURJjCbEizukX7-s0KFdEI3g_8aApbsEALw_wcB" target="_blank" rel="noopener noreferrer"> Newton Paiva</a> e agora estou fazendo o <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/" target="_blank" rel="noopener noreferrer">Curso da Udemy</a> pra aprimorar minhas hards skills e fiz essa pagina da twitch justamente para treinar os meus conhecimentos que aprendi ate agora 😃
+                </p>
+            </div>
+            <div class="intro-img">
+                <!-- <img src="assets/img/javascript-not-optmized.svg"> -->
+                <img src="assets/img/javascript-optmized.svg" 
+                alt="Tem um homem branco com blusa rosa, calça preta e sapato preto segurando a logo de CSS3,
+                tem uma mulher branca de cabelo rosa, palito rosa forte com uma roupa branca por baixo do palito, calça preta, sapatilha rosa empurrando
+                a logo do Javascript e um outro homem moreno de palito rosa com uma roupa branca por baixo, de calça rosa, com sapato preto segurando
+                a logo do HTML5, atras deles tem uma planta grande com um rosa clarinho e no chão tem tres plantinhas pequenas rosas com branco com
+                um sombreado escuro e claro, no fim de tudo é uma logo de HTML, CSS e JS em svg">
+            </div>
+        </div>
+    </section>
+
+    <section id="oqueeatwitch" class="main-white-bg section">
+        <div class="main-content oqueeatwitch-content">
+            <h2>O que é a Twitch:</h2>
+            <p>Você já ouviu falar da <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer"> Twitch? </a> Essa plataforma de streaming está crescendo muito e oferecendo aos criadores de conteúdos gamers, músicos e outros, a possibilidade de transmitir conteúdo e ganhar dinheiro.</p>
+            <p>Se você é um gamer e nunca usou a Twitch, você não sabe o que está perdendo, especialmente os fãs de games estilo estratégia e MMO. Mas para além dos gamers, a plataforma é ótima para fãs de música, talk shows, esportes, viagens e comida. Confira uma análise dos recursos mais notáveis da Twitch.</p>
+            <p>A Twitch é uma plataforma de transmissão ao vivo focada em games. Fundada por Justin Kan em 2011, era originalmente um spin-off da Justin.tv. A Justin.tv foi um website criado por Justin Kan, Emmett Shear, Michael Seibel e Kyle Vogt em 2007 para permitir que qualquer pessoa transmitisse vídeos online.</p>
+            <p>A Twitch foi relançada no final de 2007, permitindo que os usuários criassem seus próprios canais e transmitissem seu próprio conteúdo através da plataforma.
+            </p>
+        </div>
+    </section>
+
+    <section id="quando-comecou" class="main-bg section"> 
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading">Historia da Twitch:</h2>
+            <p class="grid-description">Essa seção trata da <a href="https://pt.wikipedia.org/wiki/Twitch" target="_blank" rel="noopener noreferrer">Historia da Twitch</a>, de como e quando começou, e como ela esta hoje em um patamar diferente</p>
+            <div class="grid">
+                <article>
+                    <h3> Fundação e crescimento inicial (2007-2013)</h3>
+                    <p>
+                        Quando Justin.tv foi lançado em 2007 por Justin Kan e Emmett Shear, o site foi dividido em várias categorias de conteúdo. A categoria de jogos cresceu especialmente rápido e se tornou o conteúdo mais popular do site. Em junho de 2011, a empresa decidiu desmembrar o conteúdo do jogo como TwicthTV, inspirado no termo twitch gameplay. Foi lançado oficialmente em beta público em 6 de junho de 2011. Desde então, Twitch atraiu mais de 35 milhões de visitantes únicos por mês. Twitch tinha cerca de 80 funcionários em junho de 2013, que aumentaram para 100 em dezembro de 2013. A empresa estava sediada no distrito financeiro de São Francisco.
+                        Twitch foi apoiado por investimentos significativos de capital de risco, com US $ 15 milhões em 2012 (além dos US $ 7 milhões originalmente levantados para Justin.tv), e US $ 20 milhões em 2013. Investidores durante três rodadas de arrecadação de fundos até o final de 2013 incluíram Draper Associates, Bessemer Venture Partners e Thrive Capital. Além do influxo de financiamento de risco, acreditava-se em 2013 que a empresa havia se tornado lucrativa. No final de 2013, principalmente devido ao aumento da audiência, Twitch teve problemas com atrasos e baixas taxas de quadros na Europa. Twitch posteriormente adicionou novos servidores na região. Também para resolver esses problemas, Twitch implementou um novo sistema de vídeo que se mostrou mais eficiente do que o sistema anterior. Inicialmente, o novo sistema de vídeo foi criado pelos usuários porque causou um atraso significativo no stream, interferindo na interação transmissor-espectador. A equipe do Twitch disse que o aumento do atraso era provavelmente temporário e, no máximo, era um troca aceitável pela redução no buffer.
+                    </p>
+                </article>
+                <article>
+                    <h3> Crescimento, especulação de aquisição no YouTube (2014)</h3>
+                    <p>
+                        Em fevereiro de 2014, a empresa controladora do Twitch (Justin.tv, Inc.) foi renomeada como Twitch Interactive, refletindo o aumento da proeminência do serviço em relação ao Justin.tv como o principal negócio da empresa. No mesmo mês, uma transmissão conhecida como Twitch Plays Pokémon, uma tentativa de crowdsourcing de jogar Pokémon Red usando um sistema que traduz comandos de chat em controles de jogo se tornou viral. Em 17 de fevereiro, o canal atinguiu mais de 6,5 milhões de visualizações no total e média de visualizações simultâneas entre 60 e 70 mil espectadores com pelo menos 10% de participação. O vice-presidente de marketing, Matthew DiPietro, elogiou a transmissão como "mais um exemplo de como os videogames se tornaram uma plataforma de entretenimento e criatividade que vai além da intenção original do criado do jogo. Combinando um videogame, um vídeo ao vivo e uma experiência participativa, a emissora criou um híbrido de entretenimento feito sob medida para a comunidade Twitch. Esta é uma prova de conceito maravilhosa que esperamos ver mais no futuro." Começando com sua edição de 2014, Twitch tornou-se a plataforma oficial de transmissão ao vivo da Electronic Entertainment Expo.
+                    </p>
+                </article>
+                <article>
+                    <h3> Subsidiária da Amazon</h3>
+                    <p>
+                        Em 25 de agosto de 2014, a Amazon adquiriu a Twitch Interactive por US $ 970 milhões em um negócio totalmente em dinheiro. Fontes relataram que o suposto acordo com o Google fracassou e permitiu que a Amazon fizesse a oferta, com a Forbes relatando que o Google havia desistido do acordo devido a potenciais preocupações antitruste em torno dele e sua propriedade existente do YouTube. A aquisição foi fechada em 25 de setembro de 2014. Take-Two Interactive, que possuía uma participação de 2% no momento da aquisição, teve um lucro inesperado de $ 22 milhões.
+                        Twitch adquiriu o Internet Games Database (IGDB), um site dirigido pelo usuário semelhante em funcionalidade ao Internet Movie Database (IMDb) para catalogar detalhes de videogames em setembro de 2019. Twitch planeja usar o serviço de banco de dados para melhorar seus próprios recursos de pesquisa interna e ajudar os usuários a encontrar os jogos nos quais estão interessados.
+                        
+                        Em 26 de setembro de 2019, Twitch revelou um novo logotipo e um design de site atualizado. O design é acompanhado por uma nova campanha publicitária, "Já és um de nós", que terá como objetivo divulgar os membros da comunidade da plataforma.
+                        
+                        Twitch começou a assinar acordos de exclusividade com streamers de alto perfil em dezembro de 2019, começando por DrLupo, TimTheTatman e Lirik, que tinham um total de 10,36 milhões de seguidores na época. Dr. Disrespect assinou um contrato de vários anos em março de 2020. Em 26 de junho de 2020, o Dr. Disrespect foi banido do Twitch por razões inexplicáveis e seu canal foi removido do site.
+                        
+                        Twitch introduziu um Conselho Consultivo de Segurança em maio de 2020, formado por streamers, acadêmicos e think tanks, com o objetivo de desenvolver diretrizes para moderação, equilíbrio trabalho-vida pessoal e salvaguardar os interesses das comunidades marginalizadas para a plataforma. No mesmo mês, Twitch assinou streamers populares Summit1g, dakotaz e JoshOG para acordos exclusivos de vários anos.
+                        
+                        Em agosto de 2020, Twitch Prime foi renomeado como Prime Gaming, alinhando-o ainda mais com a família de serviços Amazon Prime.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id = "niveis-de-transmissao" class="section main-white-bg">
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading"><a href="https://www.twitch.tv/creatorcamp/pt-br/learn-the-basics/twitch-101/" target="_blank" rel="noopener noreferrer">Níveis de transmissão?</a></h2>
+            <p class="grid-description">A Twitch é mais do que um serviço de transmissões ao vivo. Ela é um lugar em que criadores como você podem compartilhar as coisas que adoram com uma comunidade de milhões, e também criar seu próprio canto acolhedor na internet. A Twitch é um lugar em que a sua voz pode ser ouvida ao vivo, e o seu público também. O conteúdo deste site é projetado para ajudar no seu crescimento como criador, desenvolver uma comunidade e ganhar a vida fazendo o que gosta.</p>
+            <div class="grid">
+                <article>
+                    <h3>Streamer</h3>
+                    <p>
+                        Qualquer um pode transmitir, mas se você tiver menos que 18 anos, certifique-se de que você tem a supervisão de um dos seus pais ou de um guardião antes de entrar ao vivo. No instante em que começa a fazer transmissões, você já tem acesso a muitos recursos incríveis na Twitch, como o chat, a capacidade de espectadores seguirem o seu canal e análises no seu painel de controle. Você também pode começar a fazer progresso para atingir o status de Afiliado. As conquistas permitem que você acompanhe seu progresso, e quando atingir os requisitos, você verá um link no painel de controle com um convite para a integração de Afiliados.
+                    </p>
+                </article>
+                <article>
+                    <h3>Afiliado</h3>
+                    <p>
+                        Ao atingir o nível de Afiliado, você terá ainda mais ferramentas fantásticas à sua disposição, incluindo um emote personalizado e um botão de inscrição para que seus fãs possam te dar apoio. Para muitos streamers, se tornar um Afiliado é a meta principal a atingir. Para outros, é uma etapa para o status de Parceiro. Se é isso o que você deseja alcançar, as conquistas vão te ajudar a acompanhar o seu progresso outra vez, e permitirão que você possa se candidatar para o Programa de Parceiros depois que atingir certos critérios.
+                    </p>
+                </article>
+                <article>
+                    <h3>Parceiro</h3>
+                    <p>
+                        No final da jornada das transmissões como Afiliado, você receberá um convite para se candidatar para ser um Parceiro da Twitch. Chegar lá não é fácil, mas a parceria possui muitos benefícios adicionais, incluindo ainda mais oportunidades de rendimento e suporte com prioridade.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos-desbloqueados" class="section main-bg">
+        <div class="main-content recursos-desbloqueados-content">
+            <h2>Recursos desbloqueados:</h2>
+            <p>Aqui são os recursos desbloqueados por cada <a href="https://www.twitch.tv/creatorcamp/pt-br/learn-the-basics/twitch-101/" target="_blank" rel="noopener noreferrer">Nivel de transmisção</a></p>
+            <div class="responsive-table">
+                <table >
+                    <caption>
+                        Tabela de Recursos desbloqueados da twitch
+                    </caption>
+                    <thead>
+                        <tr class="table-header">
+                            <th>&nbsp;</th>
+                            <th>Streamer</th>
+                            <th>Afiliado</th>
+                            <th>Parceiro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Seguidores</th>
+                            <td class="has-checkmark">&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>Chat</th>
+                            <td class="has-checkmark">&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>Inscrições</th>
+                            <td>&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>Espaços de emote</th>
+                            <td>&nbsp;</td>
+                            <td>Poucos</td>
+                            <td class="text-center">Muitos</td>
+                        </tr>
+                        <tr>
+                            <th>Receita de anúncios</th>
+                            <td>&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>Cheermotes personalizados</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>Distintivos de assinante</th>
+                            <td>&nbsp;</td>
+                            <td>Poucos</td>
+                            <td>Muitos</td>
+                        </tr>
+                        <tr>
+                            <th>Distintivo verificado</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class="has-checkmark">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="melhores-canais" class="section main-white-bg">
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading">Melhores canais:</h1>
+            <p class="grid-description">Nessa seção eu coloquei os canais da Twitch que eu mais assisto :)</p>
+            <!-- Caso coloque esse link source.unsplash.com/random/800x800 pra gerar as imagens coloque isso na frente -> ?r=1 
+            source.unsplash.com/random/800x800?r=1 porque dessa forma ele vai entender que cada imagem tem um parametro diferente
+            porque se usar esse link sem isso ele pega a mesma imagem pra todos -->
+            <div class="grid-two">
+                
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/yoda" target="_blank" rel="noopener noreferrer"><h3>Yoda</h3> 
+                        <img src="assets/img/Yoda.jpg" alt="uma pessoa branca, de cabelos loiros">
+                    </a>
+                </a>
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/jukes" target="_blank" rel="noopener noreferrer"><h3>Jukes</h4></a>
+                    <img src="assets/img/jukes.gif" alt="um cara branco doido pra karalho de cabelo pequeno e preto">
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/kennzy" target="_blank" rel="noopener noreferrer"><h3>Kennzy(Markin)</h3></a>
+                    <img src="assets/img/Kennzy Markin.jpg" alt="uma pessoa de cabelo grande e branca com uma roupa colorida e com uma rosa vermelha na mão">
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/pimpimenta" target="_blank" rel="noopener noreferrer"><h3>pimpimenta</h3></a>
+                    <img src="assets/img/pimp-pimpimenta.gif" alt="uma pessoa branca de cabelo pequeno e preto, com oculos azul que da reflexo">
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/liminhag0d" target="_blank" rel="noopener noreferrer"><h3>liminhag0d</h3></a>
+                    <img src="assets/img/Liminhagod.jpg" alt="uma pessoa branca de cabelo pequeno e preto, branca, de oculos preto, com um headset na cabeça, sentado na cadeira">
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/alanzoka" target="_blank" rel="noopener noreferrer"><h3>alanzoka</h3></a>
+                    <img src="assets/img/alanzoka.jpg" alt="uma pessoa branca com olhos vesgos de cabelo ruivo, com um headset na cabeça">
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/romerx" target="_blank" rel="noopener noreferrer"><h3>RomerX</h3></a>
+                    <img src="assets/img/RomerX.png" alt="uma pessoa branca de cabelo preto, sentado na cadeira">
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/gragolandia1" target="_blank" rel="noopener noreferrer"><h3>Gragolandia1</h3></a>
+                    <img src="assets/img/Gragolandia.png" alt="uma pessoa branca de cabelo grande e preto, com um oculos para visão, com um headset na cabeça, sentado na cadeira">
+                </div>
+                <div class="gallery-img">
+                    <a href="https://www.twitch.tv/pedrokasgameplays" target="_blank" rel="noopener noreferrer"><h3>Meu canal</h3></a>
+                    <img src="assets/img/foto do meu canal.png" alt="uma caveira preta, com uma gravata e chapeu preto e vermelho, com um fundo vermelho">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="meu-contato" class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+                <h2>
+                    Contate-me:
+                </h2>
+                <p>
+                    Se quiser bater um papo, me chamar pra algum projeto ou pra algum serviço 😃 fiz esse forms a onde você coloca seu nome, seu email e o principal a sua mensagem, o que você gostaria de falar pra mim.
+                </p>
+            </div>
+            <div class="intro-img">
+                <!-- <img src="assets/img/javascript-not-optmized.svg"> -->
+                <img src="assets/img/conctact us.svg">
+            </div>
+            <div class="contact-form">
+                <fieldset class="form-grid">
+                    <legend>Contate-me</legend>
+                    <div class="form-group">
+                        <label for="first-name">Primeiro nome</label>
+                        <input placeholder="Seu nome" type="text" name="first-name" id="first-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Segundo nome</label>
+                        <input  placeholder="Seu segundo nome" type="text" name="last-name" id="last-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input  placeholder="Seu Email" type="email" name="email" id="email">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Mensagem</label>
+                        <textarea  placeholder="Sua mensagem" name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit">Send message</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="footer" class="footer main-white-bg">
+        <p>Feito com ❤️ por Pedro Henrique</p>
+        <div class="redes-sociais">
+
+        
+            <a href="https://www.linkedin.com/in/pedro-henrique-vieira-fernandes/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/iconmonstr-linkedin-3.svg" alt="Logo do linkedin, i e n modelado internamente de um quadrado preto">
+            </a>
+            <a href="https://github.com/PedrohvFernandes" target="_blank" rel="noopener noreferrer"> 
+                <img src="assets/img/iconmonstr-github-1.svg" alt="Imagem da logo do Github, um gatinho modelado internamente no circulo preto">
+            </a> 
+            <a href="mailto:pedrohv20fernandes@gmail.com?subject=Mensagem enviada do site da Twitch" rel="noopener noreferrer">
+                <img src="assets/img/iconmonstr-email-3.svg" alt="Logo do gmail, um envolepe, uma cartinha">
+            </a>
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5533999181843&text=Oi%20Pedro,%20tudo%20bem?!" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/iconmonstr-whatsapp-1.svg" alt="logo do whatsapp, um telefone modelado internamento no circulo preto, em volta de um circulo">
+            </a>
+            <a href="https://www.instagram.com/pedro17fernandes/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/img/iconmonstr-instagram-11.svg" alt="Logo do instagram">
+            </a>
+        </div>
+    </footer>
+    <a class="back-to-top" href="#intro">▲</a>
+</body>
+</html>
