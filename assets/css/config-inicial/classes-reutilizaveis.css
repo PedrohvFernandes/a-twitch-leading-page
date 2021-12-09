@@ -2,7 +2,7 @@
 
 /* Essa classe vai servir pra adicionar o background(bg) ao elemento que eu quiser*/
 .main-bg{
-    background-image: url(/Estudos/seção-33-landing-page-com-html5-css3/assets/img/Main-bg.svg);
+    background-image: url(/assets/img/Main-bg.svg);
     /* O meu background vai se ajustar com o tamanho da tela */
     background-size: cover;
     background-position: center center;
