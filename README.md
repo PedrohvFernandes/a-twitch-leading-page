@@ -5,14 +5,13 @@ streaming de jogos, conversa, culinária, etc mas o principal foco é de jogos e
 
 ### Hospedagem Netlify: https://atwitch.netlify.app
 
-### Feito com HTML, CSS, JS
+### Feito com HTML e CSS
 ### Tela do projeto
   <img height="450" src="https://github.com/PedrohvFernandes/a-twitch-leading-page/blob/main/assets/screeanshot/Print%20do%20projeto.png">
 
 ## Tecnologias:
 - HTML: <img align="center" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
 - CSS <img align="center" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-- JS <img align="center" height="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
 - Flexbox
 
 ## 👨‍💻 Autor:
